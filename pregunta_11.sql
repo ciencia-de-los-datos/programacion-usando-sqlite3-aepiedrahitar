@@ -42,4 +42,4 @@
 -- SELECT strftime('%Y',c14) as 'YEAR', COUNT(*) as 'CANT'
 SELECT COUNT(*) as 'COUNT(*)'
 FROM tbl1
-WHERE strftime(%Y,C14)='2018'
+WHERE strftime('%Y',C14)='2018'
