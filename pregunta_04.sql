@@ -42,4 +42,5 @@
 -- 
 SELECT k0, c16 
 FROM tbl1 
-WHERE SUBSTRING(c16, 1, 1)=k0
+WHERE SUBSTR(c16, 1, 1)=k0
+
