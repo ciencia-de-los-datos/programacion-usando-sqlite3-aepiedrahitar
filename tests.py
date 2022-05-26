@@ -292,6 +292,7 @@ def test_14():
     conn, _ = load_data()
     with open("pregunta_14.sql", encoding="utf-8") as file:
         query = file.read()
+    print(pd.read_sql_query(query, conn).to_dict())    
     assert pd.read_sql_query(query, conn).to_dict() == {
         "K0": {0: "A", 1: "B", 2: "C", 3: "D", 4: "E"},
         "avg(c21)": {
@@ -303,22 +304,23 @@ def test_14():
         },
     }
 
+test_14()
 
-test = {
-    "01": test_01,
-    "02": test_02,
-    "03": test_03,
-    "04": test_04,
-    "05": test_05,
-    "06": test_06,
-    "07": test_07,
-    "08": test_08,
-    "09": test_09,
-    "10": test_10,
-    "11": test_11,
-    "12": test_12,
-    "13": test_13,
-    "14": test_14,
-}[sys.argv[1]]
+# test = {
+#     "01": test_01,
+#     "02": test_02,
+#     "03": test_03,
+#     "04": test_04,
+#     "05": test_05,
+#     "06": test_06,
+#     "07": test_07,
+#     "08": test_08,
+#     "09": test_09,
+#     "10": test_10,
+#     "11": test_11,
+#     "12": test_12,
+#     "13": test_13,
+#     "14": test_14,
+# }[sys.argv[1]]
 
-test()
+# test()
